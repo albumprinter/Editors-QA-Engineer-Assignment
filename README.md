@@ -37,3 +37,7 @@ To see the report please run:
 
 
 **We wish you success with your test!**
+
+Test plan for the [online editor](https://t-dtap.editor.bonusprint.co.uk/instant/index.html?articleType=hardcoverphotobook&papId=PAP_360):
+
+Test plan: [Photo book editor Test Plan v.1.0.0](https://epam-my.sharepoint.com/:w:/p/vadym_nastoiashchyi/EYAv5te_SOpKjokAti2R8-8B1FzChJy2Kq7l9_pDvUr9QQ?e=u0K9he).
