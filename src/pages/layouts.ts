@@ -1,16 +1,18 @@
 import { writeFile, mkdir } from "fs/promises";
 import { expect, Page } from "@playwright/test";
 import { toPng } from "jdenticon";
-import TitleCreationModal from "./src/modals/titleCreationModal";
-import EmptyPagesModal from "./src/modals/emptyPagesModal";
+import TitleCreationModal from "../modals/titleCreationModal";
+import EmptyPagesModal from "../modals/emptyPagesModal";
 
 export class PhotoSelectorLayout {
+  readonly completeTitle = 'h2:has-text("Check out the options for your photo book!")';
+  readonly headerTitle = 'h3:has-text("Your photo book is ready")';
+  readonly addPhotosButton = "[data-tam=add-photos-button]";
+  readonly addToBasketButton = "[data-tam=add-to-basket]";
   readonly browsePhotosInput = "[data-tam=browse-photos]";
   readonly uploadStatsText = "[data-tam=upload-stats]";
-  readonly addPhotosButton = "[data-tam=add-photos-button]";
   readonly editYourBookTitleBtn = ".edit-btn";
-  readonly headerTitle = 'h3:has-text("Your photo book is ready")';
-  readonly addToBasketButton = "[data-tam=add-to-basket]"
+
   readonly titleCreationModal = new TitleCreationModal(this.page);
   readonly emptyPagesModal = new EmptyPagesModal(this.page);
 
@@ -42,6 +44,10 @@ export class PhotoSelectorLayout {
     await this.page.waitForSelector(this.uploadStatsText, { state: "detached" });
   }
 
+  async waitForPhotoBookIsReady(): Promise<void> {
+    await this.page.waitForSelector(this.headerTitle, { state: "visible" });
+  }
+
   async clickOnUsePhotos(): Promise<void> {
     await this.page.click(this.addPhotosButton);
   }
@@ -54,12 +60,8 @@ export class PhotoSelectorLayout {
     await this.page.click(this.addToBasketButton);
   }
 
-  async waitForPhotoBookIsReady(): Promise<void> {
-    await this.page.waitForSelector(this.headerTitle, { state: "visible" });
-  }
-
   async checkPhotoBookIsCreated(): Promise<void> {
-    await this.page.waitForSelector('h2:has-text("Check out the options for your photo book!")');
+    await this.page.waitForSelector(this.completeTitle, { state: "visible" });
     await expect(this.page).toHaveURL(/ProductConfiguration/);
   }
 }

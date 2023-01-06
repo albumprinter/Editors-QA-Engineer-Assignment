@@ -2,6 +2,7 @@
   "name": "@albelli/qa-engineer-playwright-test",
   "private": true,
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "test": "node_modules/.bin/playwright test",
     "report": "node_modules/.bin/playwright show-report"

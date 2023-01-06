@@ -1,6 +1,5 @@
-import { expect } from "@playwright/test";
 import { test } from "../setup";
-import { PhotoSelectorLayout } from "../layouts";
+import { PhotoSelectorLayout } from "../src/pages/layouts";
 
 test.describe("Photobook", () => {
   test.beforeEach(async ({ page, getInstantEditorUrl }) => {
