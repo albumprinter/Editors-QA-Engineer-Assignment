@@ -29,6 +29,13 @@ test.describe("Photobook", () => {
       await photoSelector.waitForPhotoBookIsReady();
     });
 
+    await test.step("upload images by click on add more photos", async () => {
+      await photoSelector.clickOnAddMorePhotosButton();
+      await photoSelector.createAndUploadRandomPhotos(1);
+      await photoSelector.waitForUploadsComplete();
+      await photoSelector.waitForPhotoBookIsReady();
+    });
+
     await test.step("edit photobook title", async () => {
       await photoSelector.clickOnEditYourBookTitle();
       await photoSelector.titleCreationModal.enterTitle("My Family Album");

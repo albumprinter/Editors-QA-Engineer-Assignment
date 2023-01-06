@@ -12,6 +12,7 @@ export class PhotoSelectorLayout {
   readonly browsePhotosInput = "[data-tam=browse-photos]";
   readonly uploadStatsText = "[data-tam=upload-stats]";
   readonly editYourBookTitleBtn = ".edit-btn";
+  readonly addMorePhotosButton = "[data-tam=add-more-photos]";
 
   readonly titleCreationModal = new TitleCreationModal(this.page);
   readonly emptyPagesModal = new EmptyPagesModal(this.page);
@@ -58,6 +59,10 @@ export class PhotoSelectorLayout {
 
   async clickOnAddToBasket(): Promise<void> {
     await this.page.click(this.addToBasketButton);
+  }
+
+  async clickOnAddMorePhotosButton(): Promise<void> {
+    await this.page.click(this.addMorePhotosButton);
   }
 
   async checkPhotoBookIsCreated(): Promise<void> {
