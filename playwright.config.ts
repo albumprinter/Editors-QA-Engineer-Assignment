@@ -6,7 +6,7 @@ const config: PlaywrightTestConfig = {
   // https://playwright.dev/docs/test-configuration
   timeout: 50000,
   use: {
-    //headless: false,
+    headless: false,
     trace: "on-first-retry",
   },
 };

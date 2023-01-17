@@ -1,7 +1,7 @@
-import { expect } from "@playwright/test";
-import { test } from "../setup";
-import { PhotoSelectorLayout } from "../layouts";
+import { test } from "../../../setup";
+import { PhotoSelectorLayout } from "../../../selectors/layouts";
 
+//this could be extracted into
 test.describe("Photobook", () => {
   test("happy path", async ({ page, getInstantEditorUrl }) => {
     await test.step("open photobook", async () => {

@@ -1,5 +1,6 @@
 import { test as base } from "@playwright/test";
 
+//TODO create an encapsulated interface and store bellow values in Enum here
 export type TestEnvironment = "test" | "acceptance" | "production";
 export type Channel = "bonusprint.co.uk";
 export type ArticleType = "HardCoverPhotoBook";
