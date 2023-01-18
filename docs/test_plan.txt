@@ -1,0 +1,24 @@
+Generally I would like to speak with the PO about the product, with the Team about technology and then before everything
+we should describe scope and out-of-scope of automation.
+
+During this task i discovered bellow activities to be done.
+
+INCREASE REGRESSION COVERAGE:
+1. Cover critical functionalities - related with MVP for current project stage , where all functionalities should be
+ working and stable to deliver value:
+- registration and login flow
+- payment flow
+- editing flow ( in iterations, this part requires additional functionalities mapping to describe more detialed view)
+- Customer Service
+2. MVP - 1 happy path including selling per one product ( book, cards etc. )
+3. User Profile:
+- Settings - editing
+- Saved Projects
+- Online PhotoBooks
+- FAQs
+- Orders ( may require further functionalities mapping and exploration )
+4. Blog
+
+IMPROVEMENTS
+1. critical improvements :
+- create user creation factory , common for all test cases with proper environment config ( including countries grouping, permissions, feature flags etc )
