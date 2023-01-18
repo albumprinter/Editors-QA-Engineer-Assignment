@@ -4,10 +4,11 @@ we should describe scope and out-of-scope of automation.
 During this task i discovered bellow activities to be done.
 
 INCREASE REGRESSION COVERAGE:
+UI
 1. Cover critical functionalities - related with MVP for current project stage , where all functionalities should be
  working and stable to deliver value:
 - registration and login flow
-- payment flow
+- payment flow - needs further investigation and analysis
 - editing flow ( in iterations, this part requires additional functionalities mapping to describe more detialed view)
 - Customer Service
 2. MVP - 1 happy path including selling per one product ( book, cards etc. )
@@ -18,7 +19,24 @@ INCREASE REGRESSION COVERAGE:
 - FAQs
 - Orders ( may require further functionalities mapping and exploration )
 4. Blog
+5. Cover more edge cases and other functionalities of products
+LOAD - if it is not done yet, then it is huge risk to not do it ASAP
+it requires to perform load tests on the backend side
+- evaluate available technology
+- create a POC of evaluated tech
+- start analysing backend metrics ( observability ) and based on findings design covering load scenarios
+- extend load scenarios if needed
+SECURITY
+the minimum is:
+1. Static Analysis
+2. Dynamic analysis
+SAST sometimes can be done through the config of CI/CD ( f.ex. gitlab ci scanners )
+may require evaluation of new technology ( f.ex.: Sonar Cloud , Snyk )
 
 IMPROVEMENTS
 1. critical improvements :
-- create user creation factory , common for all test cases with proper environment config ( including countries grouping, permissions, feature flags etc )
+- create user creation factory , common for all test cases with proper environment config - trough API
+( including countries grouping, permissions, feature flags etc. )
+2. implement configuration allowing for multi-country testing ( common scenarios, country dedicated etc. )
+3. Observability - start observing the test runs , cycles to spot any trends ( flaky, short, longest etc. ):
+- may require to evaluate dedicated technology ( f.ex.: allure )

@@ -1,6 +1,5 @@
 import {test} from '../../../../setup';
 
-
 test.describe("User registration", () => {
   test.beforeEach(async ({ page,getLoginRegisterUrl  }) => {
     const registerUrl = getLoginRegisterUrl("register");
@@ -10,7 +9,7 @@ test.describe("User registration", () => {
   test("Given user wants to register himself", async ({ page }) => {
 
     await test.step("When type valid email address", async () => {
-      console.log('type email')
+      console.log('Typing email address')
     });
 
     await test.step("And type his valid password", async () => {
