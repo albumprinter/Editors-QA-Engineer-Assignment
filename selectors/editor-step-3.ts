@@ -23,8 +23,9 @@ export class EditorStep3 {
 
     this.editingDialogueWindow = page.locator("[data-testid=dialog-window]");
     this.editingDialogueCancel = page.locator("[data-tam=cancel-cover-edit]");
-    // this.editingDialogueConfirm = page.locator("[data-tam=confirm-cover-edit]");
-    this.editingDialogueConfirm = page.locator("[data-tam=\"confirm-cover-edit\"]");
+    //TODO bellow element has overlay and should be fixed in UI, because some parents layers are hiding given one with
+    // data-tam attribute. Cannot be clicked directly
+    this.editingDialogueConfirm = page.locator("[data-tam=confirm-cover-edit]");
     //TODO add data-testid for bellow selector
     this.editingDialogueTitle = page.locator("[placeholder=\"Enter a title\"]:required");
     this.editingDialogueTitleErr = page.locator(".status-container");

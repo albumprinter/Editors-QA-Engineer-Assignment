@@ -9,19 +9,18 @@ test.describe("User registration", () => {
   })
   test("Given user wants to register himself", async ({ page }) => {
 
-    await test.step("And ", async () => {
-   console.log('Here IM')
-    });
-
-    await test.step("And type his valid email adress", async () => {
+    await test.step("When type valid email address", async () => {
       console.log('type email')
     });
+
     await test.step("And type his valid password", async () => {
       console.log('type pass')
     });
     await test.step("And submit", async () => {
       console.log('submit')
     });
-
+    await test.step("Then user is registered", async () => {
+      console.log('registration summary')
+    })
   });
 });
