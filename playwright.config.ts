@@ -8,6 +8,8 @@ const config: PlaywrightTestConfig = {
   use: {
     headless: false,
     trace: "on-first-retry",
+    screenshot: "only-on-failure",
+    video: "on-first-retry"
   },
 };
 

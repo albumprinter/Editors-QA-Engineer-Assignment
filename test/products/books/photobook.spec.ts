@@ -1,7 +1,6 @@
 import { test } from "../../../setup";
-import { PhotoSelectorLayout } from "../../../selectors/layouts";
+import { PhotoSelectorLayout } from "../../../helpers/photosGenerator";
 
-//this could be extracted into
 test.describe("Photobook", () => {
   test("happy path", async ({ page, getInstantEditorUrl }) => {
     await test.step("open photobook", async () => {
