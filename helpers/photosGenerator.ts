@@ -1,5 +1,5 @@
 import { writeFile, mkdir } from "fs/promises";
-import type { Locator, Page } from "@playwright/test";
+import type { Page } from "@playwright/test";
 import { toPng } from "jdenticon";
 
 export class PhotoSelectorLayout {

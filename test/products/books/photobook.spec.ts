@@ -1,6 +1,5 @@
-import { expect } from "@playwright/test";
-import { test } from "../setup";
-import { PhotoSelectorLayout } from "../layouts";
+import { test } from "../../../setup";
+import { PhotoSelectorLayout } from "../../../helpers/photosGenerator";
 
 test.describe("Photobook", () => {
   test("happy path", async ({ page, getInstantEditorUrl }) => {
